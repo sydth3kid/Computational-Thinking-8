@@ -26,23 +26,41 @@ window.tracer(0)
 
 # Section 2: Setup
 # TODO - create your player character
-s1 = create_sprite ("sydney" 0,0)
-set_background ("black")
+s1 = create_sprite ("sydney" ,0,0)
+s2 = create_sprite ("red circle" ,0,0)
+set_background ("Black")
 score=0
 
 # Section 3: Controls
+def up():
+	s1.setheading(90)
+	s1.forward(10)
+
+def down():
+	s1.setheading(270)
+	s1.forward(10)
+
+def left():
+	s1.setheading(0)
+	s1.forward(10)
+
+def right():
+	s1.setheading(180)
+	s1.forward(10)
+
 window.onkeypress (up, "w")
 window.onkeypress (down, "s")
 window.onkeypress (left, "d")
-window.onkeypress (Right, "a")
+window.onkeypress (right, "a")
 # TODO - pick keys for each control
 
 # Section 4: Game Loop
 window.listen()
-timer = 0
+lives = 3
+
+
 while True:
-	time.sleep(0.1)
-	timer += 1  
+
 	 
     
  	# TODO - code for automatic actions
@@ -54,8 +72,8 @@ while True:
 
 	window.update()
 
-	# if :
-	# 	break
+	if lives == 0: 
+		break
 	
 
 print("Game Over")
