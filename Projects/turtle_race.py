@@ -35,7 +35,7 @@ t2 = create_sprite("can",x2,y2)
 t3 = create_sprite("fox",x3,y3)
 t4 = create_sprite("corgi",x4,y4)
 
-
+# the fastest sprite would be the one with 14 because it is going to move that amount every time, and is not random.
 # # Section 4 - Racing
 # # TODO - set how much each variable changes by and increase the number of repeats to at least 30
 # # TODO - explain here which sprites are faster or slower
